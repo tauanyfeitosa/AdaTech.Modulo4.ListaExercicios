@@ -1,0 +1,6 @@
+@AdaTech.Modulo4.ListaExercicios_HostAddress = http://localhost:5019
+
+GET {{AdaTech.Modulo4.ListaExercicios_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
