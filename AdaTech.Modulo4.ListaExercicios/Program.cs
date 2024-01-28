@@ -1,11 +1,6 @@
 using AdaTech.Modulo4.ListaExercicios.Options;
 using AdaTech.Modulo4.ListaExercicios.Services;
-using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using BenchmarkDotNet.Running;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.OpenApi.Models;
 
@@ -71,6 +66,10 @@ namespace AdaTech.Modulo4.IOptions
             app.UseAuthorization();
 
             app.MapControllers();
+
+            // Para executar o benchmark antes de o servidor web ser inicializado.
+            // Se quiser conhecer mais sobre o projeto dá uma olhada nas docs: https://github.com/dotnet/BenchmarkDotNet?tab=readme-ov-file
+            BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(["-f","*"]);
 
             app.Run();
 

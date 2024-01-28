@@ -41,7 +41,8 @@ namespace AdaTech.Modulo4.ListaExercicios.Services
                 int explodedPlayer = playersQueue.Dequeue();
                 result.AppendLine($"Jogador {explodedPlayer} explodiu, restam os jogadores: {string.Join(", ", playersQueue)}");
 
-                passes = _random.Next(1, _maxRandomNumber + 1);
+                // Desnecessário:
+                // passes = _random.Next(1, _maxRandomNumber + 1);
             }
 
             result.AppendLine($"Jogador {playersQueue.Dequeue()} venceu");
