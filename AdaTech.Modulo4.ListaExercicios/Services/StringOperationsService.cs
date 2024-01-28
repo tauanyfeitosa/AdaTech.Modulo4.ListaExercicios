@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using AdaTech.Modulo4.ListaExercicios.Options;
 
 namespace AdaTech.Modulo4.ListaExercicios.Services
