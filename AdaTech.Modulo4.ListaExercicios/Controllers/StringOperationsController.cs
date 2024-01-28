@@ -4,17 +4,17 @@ using AdaTech.Modulo4.ListaExercicios.Services;
 [ApiController]
 [Route("[controller]")]
 [ApiExplorerSettings(GroupName = "Exercício 1")]
-internal class StringOperationsController : ControllerBase
+public class StringOperationsController : ControllerBase
 {
     private readonly StringOperationsService _stringOperationsService;
 
-    internal StringOperationsController(StringOperationsService stringOperationsService)
+    public StringOperationsController(StringOperationsService stringOperationsService)
     {
         _stringOperationsService = stringOperationsService;
     }
 
     [HttpPost("Listas")]
-    internal ActionResult<List<string>> FilterLongStrings([FromBody] List<string> input)
+    public ActionResult<List<string>> FilterLongStrings([FromBody] List<string> input)
     {
         return _stringOperationsService.FilterList(input);
     }

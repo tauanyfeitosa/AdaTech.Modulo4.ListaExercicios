@@ -6,16 +6,16 @@ using AdaTech.Modulo4.ListaExercicios.Options;
 
 namespace AdaTech.Modulo4.ListaExercicios.Services
 {
-    internal class WordCounterService
+    public class WordCounterService
     {
         private readonly WordCounterOptions _options;
 
-        internal WordCounterService(IOptions<WordCounterOptions> options)
+        public WordCounterService(IOptions<WordCounterOptions> options)
         {
             _options = options.Value;
         }
 
-        internal Dictionary<string, int> CountWords(string input)
+        public Dictionary<string, int> CountWords(string input)
         {
             var wordCount = new Dictionary<string, int>(StringComparer.InvariantCultureIgnoreCase);
             var wordPattern = @"\w+";

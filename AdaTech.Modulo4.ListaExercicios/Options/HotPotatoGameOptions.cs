@@ -1,7 +1,7 @@
 ﻿namespace AdaTech.Modulo4.ListaExercicios.Options
 {
-    internal class HotPotatoGameOptions
+    public class HotPotatoGameOptions
     {
-        internal int MaxRandomNumber { get; set; }
+        public int MaxRandomNumber { get; set; }
     }
 }

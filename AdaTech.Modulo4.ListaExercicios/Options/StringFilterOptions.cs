@@ -1,7 +1,7 @@
 ﻿namespace AdaTech.Modulo4.ListaExercicios.Options
 {
-    internal class StringFilterOptions
+    public class StringFilterOptions
     {
-        internal int MinLength { get; set; }
+        public int MinLength { get; set; }
     }
 }

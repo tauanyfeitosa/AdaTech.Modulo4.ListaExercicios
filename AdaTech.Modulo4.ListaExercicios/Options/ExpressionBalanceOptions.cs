@@ -1,9 +1,9 @@
 ﻿namespace AdaTech.Modulo4.ListaExercicios.Options
 {
-    internal class ExpressionBalanceOptions
+    public class ExpressionBalanceOptions
     {
-        internal bool CheckParentheses { get; set; }
-        internal bool CheckBrackets { get; set; }
-        internal bool CheckBraces { get; set; }
+        public bool CheckParentheses { get; set; }
+        public bool CheckBrackets { get; set; }
+        public bool CheckBraces { get; set; }
     }
 }

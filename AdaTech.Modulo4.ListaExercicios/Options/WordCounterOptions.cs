@@ -1,7 +1,7 @@
 ﻿namespace AdaTech.Modulo4.ListaExercicios.Options
 {
-    internal class WordCounterOptions
+    public class WordCounterOptions
     {
-        internal bool IgnoreCase { get; set; }
+        public bool IgnoreCase { get; set; }
     }
 }

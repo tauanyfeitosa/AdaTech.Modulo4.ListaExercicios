@@ -3,16 +3,16 @@ using AdaTech.Modulo4.ListaExercicios.Options;
 
 namespace AdaTech.Modulo4.ListaExercicios.Services
 {
-    internal class ExpressionBalanceService
+    public class ExpressionBalanceService
     {
         private readonly ExpressionBalanceOptions _options;
 
-        internal ExpressionBalanceService(IOptions<ExpressionBalanceOptions> options)
+        public ExpressionBalanceService(IOptions<ExpressionBalanceOptions> options)
         {
             _options = options.Value;
         }
 
-        internal bool IsExpressionBalanced(string expression)
+        public bool IsExpressionBalanced(string expression)
         {
             var stack = new Stack<char>();
 

@@ -6,17 +6,17 @@ using AdaTech.Modulo4.ListaExercicios.Options;
 
 namespace AdaTech.Modulo4.ListaExercicios.Services
 {
-    internal class HotPotatoGameService
+    public class HotPotatoGameService
     {
         private readonly int _maxRandomNumber;
         private Random _random = new Random();
 
-        internal HotPotatoGameService(IOptions<HotPotatoGameOptions> options)
+        public HotPotatoGameService(IOptions<HotPotatoGameOptions> options)
         {
             _maxRandomNumber = options.Value.MaxRandomNumber;
         }
 
-        internal string PlayHotPotato(int numberOfPlayers)
+        public string PlayHotPotato(int numberOfPlayers)
         {
             if (numberOfPlayers <= 1)
             {

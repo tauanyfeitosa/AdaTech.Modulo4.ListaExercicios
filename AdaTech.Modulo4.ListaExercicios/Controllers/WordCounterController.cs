@@ -4,17 +4,17 @@ using AdaTech.Modulo4.ListaExercicios.Services;
 [ApiController]
 [Route("[controller]")]
 [ApiExplorerSettings(GroupName = "Exercício 4")]
-internal class WordCounterController : ControllerBase
+public class WordCounterController : ControllerBase
 {
     private readonly WordCounterService _wordCounterService;
 
-    internal WordCounterController(WordCounterService wordCounterService)
+    public WordCounterController(WordCounterService wordCounterService)
     {
         _wordCounterService = wordCounterService;
     }
 
     [HttpPost("Dicionário")]
-    internal ActionResult<Dictionary<string, int>> CountWords([FromBody] string input)
+    public ActionResult<Dictionary<string, int>> CountWords([FromBody] string input)
     {
         if (string.IsNullOrEmpty(input))
         {
