@@ -19,7 +19,7 @@ namespace AdaTech.Modulo4.ListaExercicios.Services
             var wordPattern = @"\w+";
             foreach (Match match in Regex.Matches(input, wordPattern))
             {
-                string word = _options.IgnoreCase ? match.Value.ToLowerInvariant() : match.Value;
+                string word = match.Value;
 
                 if (!wordCount.ContainsKey(word))
                 {
@@ -29,5 +29,6 @@ namespace AdaTech.Modulo4.ListaExercicios.Services
             }
             return wordCount;
         }
+
     }
 }
